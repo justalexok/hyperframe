@@ -10,8 +10,8 @@ import collections
 
 Flag = collections.namedtuple("Flag", ["name", "bit"])
 
-
-class Flags(collections.MutableSet):
+from collections.abc import MutableSet
+class Flags(MutableSet):
     """
     A simple MutableSet implementation that will only accept known flags as elements.
 
